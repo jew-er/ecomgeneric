@@ -7,40 +7,48 @@
 //     }
 // })
 
-let navbtn= [...document.querySelectorAll('.navbtn')];
+let navbtn = [...document.querySelectorAll('.navbtn')];
 let navdrop = [...document.querySelectorAll('.nav-dropdown')];
-let navclasslist = navdrop.map(x=>x.classList);
+let darkzone = [...document.querySelectorAll('.darkzone')];
+let navclasslist = navdrop.map(x => x.classList);
 
-navbtn.forEach(x=>{
-x.addEventListener('click', ()=>{
-    let index = navbtn.indexOf(x);
-    if(navdrop[index].classList.contains("active")){
-        navdrop[index].classList.remove("active");
-    } else {
-    let taken = -1;
-    navclasslist.forEach((i)=>{
-        if(i.contains("active"))
-        taken = navclasslist.indexOf(i);
-        });
-
-        if(taken === -1){
-            navdrop[index].classList.add('active');
+navbtn.forEach(x => {
+    x.addEventListener('click', () => {
+        let index = navbtn.indexOf(x);
+        if (navdrop[index].classList.contains("active")) {
+            navdrop[index].classList.remove("active");
         } else {
-            navdrop[taken].classList.remove('active');
-            this.setTimeout(() => {
-                navdrop[index].classList.add('active');
-                
-            }, 400);
+            let taken = -1;
+            navclasslist.forEach((i) => {
+                if (i.contains("active"))
+                    taken = navclasslist.indexOf(i);
+            });
 
+            if (taken === -1) {
+                navdrop[index].classList.add('active');
+            } else {
+                navdrop[taken].classList.remove('active');
+                this.setTimeout(() => {
+                    navdrop[index].classList.add('active');
+
+                }, 400);
+
+            }
         }
-    }
     })
 });
 
+darkzone.forEach(x => {
+    x.addEventListener('click', () => {
+        navdrop.forEach((i) => {
+            i.classList.remove("active");
+        })
+    });
+})
 
 
 $(document).ready(function () {
-   
+
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -62,10 +70,10 @@ $(document).ready(function () {
 
     var addclass = 'color';
     var $cols = $('.qimg').click(function (e) {
-        
-        $cols.attr('id','no');
-        $(this).attr('id','op');
+
+        $cols.attr('id', 'no');
+        $(this).attr('id', 'op');
     });
-  
+
     $('.qimg').first().click();
 });
