@@ -1,0 +1,432 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+nav{
+    display:flex;
+    width:100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    transition: background 0.3s;
+    height: 12%;
+    align-items: center;
+    
+    
+}
+.navset1{margin-left: 3%;}
+.navset2{margin-right:3%;}
+
+nav div button{
+    background: transparent;
+    border: none;
+    color: white;
+    transition: color 0.3s, border 0.3s;
+    width: auto;
+    border-bottom: 2px solid transparent;
+    padding: 0;
+    margin: 5px;
+    
+}
+
+nav div button:hover{
+    border-bottom: 2px solid black;
+}
+
+nav:hover{
+    background: white;
+    box-shadow: 0 0 5px grey;
+}
+nav:hover > div > button{
+    color: black;
+}
+
+.nav-dropdown{
+    
+    overflow: hidden;
+    transition: height 0.4s;
+    position: fixed;
+    left:0;
+    top: 12%;
+    height: 0px;
+    max-height: 300px;
+    width: 100%;
+    background:#f2f2f2;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+.active{
+    height: 100%;
+    
+}
+
+main{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+.intro{
+    background: url("https://hdwallsource.com/img/2014/7/lovely-sneakers-wallpaper-42373-43376-hd-wallpapers.jpg");
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center; 
+    height:90vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.introset{
+    position: absolute;
+    bottom:25%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    width: 40%;
+    height: 80px;
+}
+
+.introbtn{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    width: 160px;
+    padding: 3px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.introbtnlink{
+    color: white;
+    text-decoration: none;
+    width: 160px;
+    text-align: center;
+    
+
+}
+
+.introbtnspan{
+    border-bottom: 2px solid white;
+    width: 100%;
+    display: inline-block;
+    transition: width 0.3s;
+}
+#introspan1{ min-width: 90px;}
+#introspan2{ min-width: 110px;}
+.introbtnlink:hover > .introbtnspan{
+    width: 1%;
+}
+
+#introtext{
+    color: white;
+    font-weight: bold;
+    font-size: 3.6em;
+    transform: rotate(-10deg);
+}
+
+.afterintro{
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.afterintro img{
+    width: 45vw;
+    height: auto;
+
+}
+
+.aftertext{
+width: 45vw;
+text-align: center;
+background:url('resources/big1.jpg')
+}
+
+.aftertext h2{
+    font-size: 1.9em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.aftertext p{
+    font-size: 1.4rem;
+}
+
+.imagestack{
+    width: 90vw;
+    height: 60vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.leftpanel,.rightpanel{
+    width:  50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.firstim{
+    width: 100%;
+    height: 66%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.secondim{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 33%;
+}
+
+.secondim img{
+    width: 50%;
+}
+
+#firstbig{
+background:url('../resources/big1.jpg');
+    background-size:     100% 100%;                      
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+#secondbig{
+ background:url('../resources/big2.jpg');
+    background-size:     100% 100%;                      
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+.imgbtnset{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    width: 40%;
+    height: 80px;
+    margin-top: 15%;
+}
+
+.imgbtn{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    width: 160px;
+    padding: 3px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.imgbtn a{
+    color: white;
+    text-decoration: none;
+    width: 160px;
+    text-align: center;
+}
+
+.imgbtn a span{
+    border-bottom: 2px solid white;
+    width: 100%;
+    display: inline-block;
+    transition: width 0.3s;
+}
+
+.spanmen{ min-width: 40px;}
+.spanwomen{min-width: 80px;}
+
+.imgbtn a:hover > .spanmen {
+    width: 0;
+}
+.imgbtn a:hover > .spanwomen {
+    width: 0;
+}
+
+.imgtext{
+    margin-top: 30%;
+    color: white;
+    text-align: center;
+}
+
+.cardsection{
+    width: 90vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.card{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+}
+.card img{
+    height: 33vh;
+}
+
+#leftcard img{
+    width: 30vw;
+}
+#rightcard img{
+    width: 40vw;
+}
+.card p{
+    line-height: 1.8rem;
+    word-spacing: 0.2rem;
+    width: 75%;
+    font-size: 1.2em;
+    margin-bottom: 25%;
+
+}
+#leftcard{
+    background: rgb(245,245,245);
+}
+#rightcard{
+    background: black;
+    color: white;
+}
+
+.carousel{
+    height: auto;
+    width:85vw;
+    margin-top: 20px;
+    padding-bottom: 20px;
+} 
+
+.slider-for h3 {
+    background: #fff;
+    color: black;
+    font-size: 36px;
+    line-height: 40px;
+    margin: 10px;
+    padding: 2%;
+    position: relative;
+    text-align: center;
+}
+
+.slider-nav div img {
+    width: 10vw;
+    height: auto;
+    opacity: 0.5;
+    margin-left: 3px;
+    margin-right: 3px;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+.slider-nav div img:hover{
+    opacity: 1;
+
+}
+.slider-nav div{
+    height: 80px;
+
+}
+
+.slider-nav div img{
+   padding-top: 20px;
+}
+
+#op{
+    opacity: 1;
+}
+
+footer{
+    margin-top: 20vh;
+    width: 100%;
+    height: 30vh;
+    background: #1f292f;
+    display: flex;
+    flex-direction: column;
+}
+
+.foot1{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    border:1px solid black;
+    color:white;
+}
+
+.navdrop1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80vw;
+    height: 100%;
+}
+
+.navhead1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.navhead1 div{
+
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    width: 25%;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+.navhead1 div:hover{opacity:1;}
+
+.navhead1 div img{
+    width: 40px;
+    height: auto;
+}
+
+.navshoes1{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.shoebox{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    align-items: center;
+}
+
+.shoebox img{ width: 10vw;}
+
+.navinfo1{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width:100%;
+}
+
+li{
+    list-style-type: none;
+}
+
+#nav1,#nav2{max-height: 65vh}
