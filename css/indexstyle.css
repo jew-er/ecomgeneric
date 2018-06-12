@@ -21,7 +21,8 @@ nav{
 }
 .navset1{margin-left: 3%;}
 .navset2{margin-right:3%;}
-
+.navactive{ background: white;}
+.navbtnactive{ color:black !important;}
 nav div button{
     background: transparent;
     border: none;
