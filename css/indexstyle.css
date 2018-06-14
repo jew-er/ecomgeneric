@@ -12,7 +12,8 @@ nav{
     top:0;
     left: 0;
     justify-content: space-between;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    z-index: 100;
     transition: background 0.3s;
     height: 10vh;
     align-items: center;
@@ -377,6 +378,9 @@ footer{
     color:white;
 }
 
+.foot1 div{
+   font-family: 'Roboto', sans-serif;
+}
 .navdrop1{
     display: flex;
     flex-direction: column;
@@ -551,13 +555,25 @@ li{
     width: 90vw;
 }
 
-footer{height: 100vh;}
+footer{height: 800px;}
 .foot1{
     font-size: 0.9em;
     flex-direction: column;
     width: 100%;
     text-align: center;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    height: 100%
+}
+.foot1 div {
+    margin-bottom: 30px;
+}
+
+.foot1 div ul{
+    margin-top: 9px;
+}
+
+.foot1 div ul li{
+    margin-bottom: 6px;
 }
 }
 
