@@ -224,6 +224,7 @@ background:url('../resources/big1.jpg');
     width: 40%;
     height: 80px;
     margin-top: 15%;
+
 }
 
 .imgbtn{
@@ -452,9 +453,118 @@ li{
     text-decoration: none;
 }
 
-.darkzone1, .darkzone2{
+.darkzone1, .darkzone2, .darkzone3{
     background: rgba(0,0,0,0.5);
     width: 100%;
 }
 .darkzone1{height: 20%;}
 .darkzone2{height:92%;}
+.darkzone3{ height:60%;}
+
+.navdrop3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 40%;
+    background:#f2f2f2;
+}
+
+.navdrop3 div img{
+    width: 15vw;
+}
+
+.qlist{
+    cursor: pointer;
+}
+
+
+.hmenu{
+    text-decoration: none;
+    color: black;
+    display: none;
+}
+
+
+@media only screen and (max-width: 720px) {
+
+    .hmenu{
+        display: flex;
+        position: absolute;
+        left: 20px;
+    }
+
+    .navlogo{
+        position: absolute;
+        right: 0;
+    }
+.navset1, .navset2{
+    display: none;
+
+}
+
+#introtext{
+    font-size: 1.7em;
+}
+
+.afterintro{
+    flex-direction: column;
+    height: 90vh;
+    
+}
+.aftertext{
+    width:  80vw;
+}
+.aftertext p{
+    font-size: 1.3em;
+
+}
+.imagestack{
+    flex-direction: column;
+    align-items: center;
+    height: 200vw;
+
+}
+.leftpanel, .rightpanel{
+    width: 100vw;
+    height: 100vw;
+    border: 1px solid black;
+}
+
+.firstim{
+    height: 100vw;
+}
+.imgbtn{
+    width: 30vw;
+}
+.secondim{ display:none;}
+
+.cardsection{
+    flex-direction: column;
+    height: 180vw;
+    width: 90%;
+}
+
+.card{
+    height: 90vw;
+    width: 90vw;
+}
+
+footer{height: 100vh;}
+.foot1{
+    font-size: 0.9em;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+}
+}
+
+
+@media only screen and (max-width: 360px){
+    .card{
+        font-size:  0.8em;
+    }
+
+}

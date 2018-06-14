@@ -55,20 +55,13 @@ window.addEventListener("scroll", function() {
 });
 
 $(document).ready(function() {
-  $(".slider-for").slick({
+  $(".slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     fade: false,
-    nextArrow: '<i class="fa fa-arrow-right larr"></i>',
-    prevArrow: '<i class="fa fa-arrow-left rarr"></i>'
-  });
-  $(".slider-nav").slick({
-    slidesToShow: 6,
-    asNavFor: ".slider-for",
-    dots: false,
-    focusOnSelect: true,
-    centerMode: true
+    dots: true,
+    autoplay: true
   });
 
   var addclass = "color";
